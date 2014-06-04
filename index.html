@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Oddur Sigurdsson | Guessing Game</title>
+	<link rel="stylesheet" type="text/css" href="css/normalize.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<link rel="stylesheet" type="text/css" href="css/extras.css">
+</head>
+<body>
+	<div id="wrapper">
+		<h3>The guessing game</h3>
+		<p class="emphasis">Can you handle the heat? Guess the number between 1 and 100 to get the prize. You have five turns to guess correctly, but you can always reveal the the answer by using a hint. Best of luck.</p>
+		<input type="text" id="input-box" placeholder="Pick a number from 1 to 100" class='form-control input' onkeydown="if (event.keyCode === 13) numberVal()"/>
+		<button type='button' id='submit-button' onclick='numberVal()' class="button">Guess</button>
+		<p id='status'></p>
+		<button type='button' id='new-game' onclick='newGame()' class="button">New Game</button>
+		<button type='button' id='hint-button' onclick='hint()' class= "button">?</button>
+		<p id='guess-count'> 5 Guesses Remaining </p>
+		<img src="img/winner.png" alt="you're a champ" id="winner">
+	</div>
+	<script type="text/javascript" src="js/guess.js"></script>
+</body>
+</html>
