@@ -82,7 +82,10 @@ function hint() {
   if (answerArr.length === 0) {
     errorMessage("Why don't you give it a try?");
   } else {
-    statusMessage("The answer was " + answer);
+  	inputId.disabled = true;
+  	submitId.disabled = true;
+    statusMessage("The answer was " + answer + ".");
+    guessId.innerHTML = "Press \'New Game\' to try again."
   }
 }
 
@@ -101,6 +104,7 @@ function gameOver() {
   inputId.disabled = true;
   submitId.disabled = true;
   statusId.innerHTML = "";
+  prizeId.style.display = "none";
 }
 
 function duplicate() {
