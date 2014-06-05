@@ -29,8 +29,7 @@ function numberVal() {
   if (duplicate() > 0) {
     errorMessage("Error: Duplicate input");
   } else if (userInput === answer) { // If correct guess
-    statusMessage("Congratulations! The number is " + answer);
-    prizeId.style.display = "block";
+  	winner();
   } else if (userInput < 1 || userInput > 100) { // Else if number is too little / too large
     errorMessage("Error: Input is out of bounds");
   } else if (isNaN(userInput)) { // else if NaN
@@ -105,6 +104,18 @@ function gameOver() {
   submitId.disabled = true;
   statusId.innerHTML = "";
   prizeId.style.display = "none";
+}
+
+function winner() {
+	inputId.disabled = true;
+  submitId.disabled = true;
+	statusMessage("Congratulations! The number is " + answer);
+  prizeId.style.display = "block";
+  if (answerArr.length < 1) {
+  	guessId.innerHTML = "You guessed the number in " + (answerArr.length + 1) + " turn";
+  } else {
+  	guessId.innerHTML = "You guessed the number in " + (answerArr.length + 1) + " turns";
+  }
 }
 
 function duplicate() {

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Oddur Sigurdsson | Guessing Game</title>
+	<link rel="stylesheet" type="text/css" href="css/normalize.css">
+	<link rel="stylesheet" type="text/css" href="css/working.css">
+	<link href='http://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
+</head>
+<body>
+	<div id="wrapper">
+
+		<h2>The</h2>
+		<h1>Guessing Game</h1>
+
+		<p class="instructions">Can you handle the heat? Guess the number between 1 and 100 to claim your prize. You have five turns to guess correctly, but you can always reveal the the answer by using a hint. Good luck!</p>
+
+		<blockquote class="rectangle-speech-border">
+
+			<p id='status'>Hello, I'm Sandy.<br>
+			Do you to play the Guessing game ?</p>
+
+		</blockquote>
+
+		<img id="sandy" src="img/sandy.png" alt="Sandy Piper, the riddle queen">
+
+		<input type="text" id="input-box" placeholder="Pick a number from 1 to 100" class='form-control input' onkeydown="if (event.keyCode === 13) numberVal()"/>
+
+		<button type='button' id='submit-button' onclick='numberVal()' class="button">Guess</button>
+
+		
+
+		<button type='button' id='new-game' onclick='newGame()' class="button">New Game</button>
+
+		<button type='button' id='hint-button' onclick='hint()' class= "button">?</button>
+
+		<p id='guess-count'> 5 Guesses Remaining </p>
+
+		<footer>
+
+			<p>Created by <a href="http://oddurs.github.com" alt="Oddur Sigurdsson's homepage" >Oddur Sigurdsson</a><br>
+			At <a href="http://fullstackacademy.com" alt="Fullstack Academy of Code">Fullstack Academy</a>, NYC</p>
+
+		</footer>
+
+		<img src="img/winner.png" alt="you're a champ" id="winner">
+
+	</div>
+	<script type="text/javascript" src="js/guess.js"></script>
+</body>
+</html>
