@@ -111,6 +111,7 @@ function winner() {
   submitId.disabled = true;
 	statusMessage("Congratulations! The number is " + answer);
   prizeId.style.display = "block";
+  document.getElementsByTagName("body").style.background = "#fff";
   if (answerArr.length < 1) {
   	guessId.innerHTML = "You guessed the number in " + (answerArr.length + 1) + " turn";
   } else {
