@@ -43,6 +43,7 @@ function numberVal() {
 }
 
 function statusMessage(message) {
+	var instructions = "Can you handle the heat? Guess the number between 1 and 100 to claim your prize. You have five turns to guess correctly, but you can always reveal the the answer by using a hint. Good luck!";
   statusId.style.display = "block";
   statusId.innerHTML = message;
   statusId.className = " bg-info";
@@ -129,4 +130,20 @@ function duplicate() {
     }
   }
   return duplicateCount;
+}
+
+function showPlay() {
+	statusId.innerHTML = "I'm thinking of a number between 1 and 100. I bet you can't figure it out in five turns or less.";
+}
+
+function showInstructions() {
+	statusId.innerHTML = "Can you handle the heat? Guess the number between 1 and 100 to claim your prize. You have five turns to guess correctly, but you can always reveal the the answer by using a hint. Good luck!";
+}
+
+function showAbout() {
+	statusId.innerHTML = "The Guessing Game is a project by Oddur Sigurdsson. It was made as an exercise in DOM manipulation in JavaScript. If you're interested in seeing how it works, check out the code at GitHub.";
+}
+
+function showShare() {
+	statusId.innerHTML = "Share this app with your friends on Twitter & Facebook";
 }

@@ -17,16 +17,18 @@
 		</header>
 		<nav>
 			<ul>
-				<li><a href="#">Play</a></li>
-				<li><a href="#">Instructions</a></li>
-				<li><a href="#">About</a></li>
-				<li><a href="#">Share</a></li>
+				<li id="nav-play" onclick="showPlay()">Play</li>
+				<li id="nav-play" onclick="showInstructions()">Instructions</li>
+				<li id="nav-about" onclick="showAbout()">About</li>
+				<li id="nav-share" onclick="showShare()">Share</li>
 			</ul>
 		</nav>
 
-		<p class="instructions">Can you handle the heat? Guess the number between 1 and 100 to claim your prize. You have five turns to guess correctly, but you can always reveal the the answer by using a hint. Good luck!</p>
+		
 
 		<blockquote class="rectangle-speech-border">
+
+			<p class="instructions">Can you handle the heat? Guess the number between 1 and 100 to claim your prize. You have five turns to guess correctly, but you can always reveal the the answer by using a hint. Good luck!</p>
 
 			<p id='status'>Hey there. I'm Sandy.<br>
 			Can you guess the number I'm thinking of ?</p>
@@ -44,7 +46,7 @@
 		<div class="secondary-controls">
 			<button type='button' id='new-game' onclick='newGame()' class="button">New Game</button>
 
-			<button type='button' id='hint-button' onclick='hint()' class= "button">?</button>
+			<button type='button' id='hint-button' onclick='hint()' class= "button">Hint</button>
 		</div>
 		<p id='guess-count'> 5 Guesses Remaining </p>
 
