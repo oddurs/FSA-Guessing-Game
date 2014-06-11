@@ -29,6 +29,7 @@ nav ul {
 nav li {
 	display: inline-block;
 	margin: 0 1em;
+	cursor: pointer;
 }
 
 /* Text */
@@ -212,13 +213,15 @@ input:focus {
   border-radius:10px;
 }
 
+
 /* creates a white rectangle to cover part of the oval border*/
 .rectangle-speech-border > :first-child:after {
   content:"";
   position:absolute;
   bottom:-10px;
-  left:484px;
-  width:26px;
+  left:76px;
+  width:24px;
   height:15px;
-  background:#c54f3b;
+  background:#fff;
 }
+
